@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Climate Change Awareness</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="nav">
+            <span id="date"></span>
+            <a href="About.html">About</a>
+        </div>
+        <div class="header">
+            <div class="title">
+                <h1>Climate Change Awareness</h1>
+                <p>Welcome to Climate Change Awareness! Explore our site for detailed statistics on global temperature trends from 1750 to 2013, at various levels from worldwide to city-specific. We also provide population data from 1960 to 2013, offering insights into demographic shifts globally and by country. Our data, derived from daily temperature observations, is aggregated to yearly averages, allowing you to easily understand trends over time. Join us in raising awareness and understanding the impact of climate change on our world.</p>
+            </div>
+        </div>
+        <div class="content">
+            <div id="search">
+                <input type="text" id="searchInput" placeholder="Search for a city or country...">
+                <div class="filter">
+                    <div class="countrySelect">
+                        <label for="countrySelect">Countries:</label>
+                        <select id="countrySelect">
+                            <option value="temperature">World</option>
+                            <option value="humidity">Country1</option>
+                            <option value="pressure">Country2</option>
+                        </select>
+                    </div>
+                    <div class="dateSelect">
+                        <label for="dateSelect">Date period:</label>
+                        <form id="dateSelect">
+                            <input type="number" id="startDate" min="1750" max="2013" step="1" value="1750">
+                            <span>—</span>
+                            <input type="number" id="endDate" min="1750" max="2013" step="1" value="2013">
+                            <span class="tooltipText">
+                                <h1 style="margin:0">Select the start and end year</h1>
+                                <p>Note that data is only available between 1750 and 2013.</p>
+                            </span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="intro">
+                <img src="/image/nasa.jpg">
+                <p><strong>This is our Earth.</strong><br>Climate change is a global issue that affects us all. The Earth's climate is changing at an unprecedented rate, with significant impacts on our environment, economy, and society. Rising global temperatures, changing weather patterns, and sea-level rise are just some of the consequences of climate change. It is essential that we take action to reduce our carbon footprint, protect our planet, and create a sustainable future for all. Climate Change Awareness is committed to raising awareness about climate change and providing data-driven insights to help inform decision-making and policy development. Together, we can make a difference and create a more sustainable world for future generations.</p>
+            </div>
+        </div>
+        <script>
+            const display = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+            // Get the current date and time
+            var now = new Date();
+            var dateTimeString = now.toLocaleString("en-AU", display); // You can customize the format as needed
+            // Update the content of the placeholder element
+            document.getElementById('date').textContent = dateTimeString;
+        </script>
+    </body>
+</html>
